@@ -29,3 +29,16 @@ $$
 We do the same thing on $N$:
 $$ N = Q_1 - Q_2$$
 Sadly, $Trans$ matrix is not appropriate to apply on $N$, since it will cause the [[#^a45ad7|Problem]]. 
+**BUT!** Don't forget that $N'$ should be perpendicular to $T'$, and that's the key point on how we find $N'$, which means, the very transformation matrix $Nor$, for $N$, has to make the equation below true: $$ N'\cdot T' = (Nor*N)\cdot (Trans*T) = 0$$
+We rewrite the **dot product** as matrix multiplication:
+$$\begin{align}
+(Nor*N)^T(Trans*T) =&\ 0\\
+N^T  Nor^T*TransT =&\ 0
+\end{align}$$
+By setting $Nor^T*Trans = 0$ , we get $N^TT = N\cdot T = 0$, which is what **perpendicular** means.
+Done! all we need is just $$
+\begin{align}
+Nor^T = Trans^{-1}\\
+Nor = (Trans^{-1})^T
+\end{align}
+$$ 
